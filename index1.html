@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/star2.css" type="text/css" rel="stylesheet" />
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#new{
+  font-weight: bold;
+  color: white;
+  font-size: 50px;
+}
+</style>
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie counter</title>
+  <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
+  <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style_login.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style_main.css">
+
+</head>
+<body style="background-image:url('b.jpg'); height:100%;">
+  <br><br><br><br>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<table align="center" style="padding:10px;" border="0.5" bgcolor="" bordercolor="#384e63" cellpadding="5" cellspacing="0">
+  
+  <?php
+
+  $mysqli = mysqli_connect(("localhost","root","","movie_ticket");
+
+  $result = mysqli_query($mysqli,"SELECT * FROM `poster` ORDER BY `poster_id` Asc");
+  while ($tr=mysqli_fetch_array($result)) {
+  
+
+  ?>
+  <tr>
+    <td align="center">
+        <br>
+      <div class="col-md-9 col-sm-12">
+          <div class="col-md-4 col-sm-6 padding-right-zero">
+            <div class="portfolio-box design">
+             <a href="detail1.html" target="_self"> <img src="upload/id1.jpg" alt="" class="img-responsive"></a>
+            </div>
+            <script type="text/javascript" src="https://demo.phpjabbers.com/1574869158_390/index.php?controller=pjFront&action=pjActionLoad&id=4&instance_id=1574869565&layout=layout1"></script>
+          </div>
+          <div class="col-md-4 col-sm-6 padding-right-zero">
+            <div class="portfolio-box design">
+              <a href="detail2.html" target="_self"><img src="upload/id2.jpg" alt="" class="img-responsive"></a>
+            </div>
+            <script type="text/javascript" src="https://demo.phpjabbers.com/1574869158_390/index.php?controller=pjFront&action=pjActionLoad&id=4&instance_id=1574869637&layout=layout1"></script>
+          </div>
+          <div class="col-md-4 col-sm-6 padding-right-zero">
+            <div class="portfolio-box design">
+             <a href="detail3.html" target="_self"> <img src="upload/id3.jpg" alt="" class="img-responsive"></a>
+            </div>
+            <script type="text/javascript" src="https://demo.phpjabbers.com/1574869158_390/index.php?controller=pjFront&action=pjActionLoad&id=4&instance_id=1574870221&layout=layout1"></script>
+          </div>
+          <div class="col-md-4 col-sm-6 padding-right-zero">
+            <div class="portfolio-box design">
+              <a href="detail4.html" target="_self"><img src="upload/id4.jpg" alt="" class="img-responsive"></a>
+            </div>
+           <script type="text/javascript" src="https://demo.phpjabbers.com/1574869158_390/index.php?controller=pjFront&action=pjActionLoad&id=4&instance_id=1574870267&layout=layout1"></script>
+          </div>
+          <div class="col-md-4 col-sm-6 padding-right-zero">
+            <div class="portfolio-box design">
+              <a href="detail5.html" target="_self"><img src="upload/id5.jpg" alt="" class="img-responsive"></a>
+            </div>
+           <script type="text/javascript" src="https://demo.phpjabbers.com/1574869158_390/index.php?controller=pjFront&action=pjActionLoad&id=4&instance_id=1574870292&layout=layout1"></script>
+          </div>
+          <div class="col-md-4 col-sm-6 padding-right-zero">
+            <div class="portfolio-box design">
+             <a href="detail6.html" target="_self"> <img src="upload/id6.jpg" alt="" class="img-responsive"></a>
+            </div>
+           <script type="text/javascript" src="https://demo.phpjabbers.com/1574869158_390/index.php?controller=pjFront&action=pjActionLoad&id=4&instance_id=1574870329&layout=layout1"></script>
+          </div>
+        </div>
+      </div>
+
+      
+      <tr align="center" ><td><b><?php echo $tr[2]; ?></b></td></tr>
+    </td>
+  </tr>
+  <?php
+    }
+  ?>
+</table>
+
+<!-- <div style="text-align:center">
+  <h2>Expanding Grid</h2>
+  <p>Click on the boxes below:</p>
+</div>
+
+<div class="row">
+  <div class="column" onclick="openTab('b1');" >
+    
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:blue;">
+    Box 2
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:red;">
+    Box 3
+  </div>
+</div>
+ Full-width columns: (hidden by default) 
+<div id="b1" class="containerTab" style="display:none;background:green">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Box 1</h2>
+  <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+</div> -->
+
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+<section class="section-padding wow fadeInUp delay-05s" id="contact">
+    <div class="container">
+      <div class="row white">
+        <div class="col-md-8 col-sm-12">
+          <div class="section-title">
+            <h2 class="head-title black">Contact Us</h2>
+            <hr class="botm-line">
+            
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12">
+          <div class="col-md-4 col-sm-6" style="padding-left:0px;">
+            <h3 class="cont-title">Email Us</h3>
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <div class="contact-info">
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <button type="submit" class="btn btn-send">Send</button>
+              </form>
+            </div>
+
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <h3 class="cont-title">Visit Us</h3>
+            <div class="location-info">
+        
+              <p class="white"><span aria-hidden="true" class="fa fa-phone"></span>Phone: 0123 456 789</p>
+              <p class="white"><span aria-hidden="true" class="fa fa-envelope"></span>Email: <a href="" class="link-dec">moviecounter@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-icon-container hidden-md hidden-sm hidden-xs">
+              <span aria-hidden="true" class="fa fa-envelope-o"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="" id="footer">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-sm-5 footer-social">
+          <div class="pull-right hidden-xs hidden-sm">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?php 
+session_start();
+$mysqli = mysqli_connect("localhost","root","","movie_ticket");
+$_SESSION["id"] = "";
+session_destroy();
+header("location:adminlogin.php");
+?>
